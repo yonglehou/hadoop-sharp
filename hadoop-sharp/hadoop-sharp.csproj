@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00D9065D-BBFD-4FA4-8E85-B435738B770E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>hadoop-sharp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Counter.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="JobConf.cs" />
+    <Compile Include="MapContext.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Partitioner.cs" />
+    <Compile Include="RecordReader.cs" />
+    <Compile Include="RecordWriter.cs" />
+    <Compile Include="ReduceContext.cs" />
+    <Compile Include="Reducer.cs" />
+    <Compile Include="TaskContext.cs" />
+    <Compile Include="Pipes\BinaryMessageTypes.cs" />
+    <Compile Include="Pipes\BinaryProtocol.cs" />
+    <Compile Include="Pipes\BinaryUpwardProtocol.cs" />
+    <Compile Include="Pipes\DownwardProtocol.cs" />
+    <Compile Include="Pipes\Protocol.cs" />
+    <Compile Include="Pipes\TaskContextImpl.cs" />
+    <Compile Include="Pipes\UpwardProtocol.cs" />
+    <Compile Include="IO\WritableUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Pipes\" />
+    <Folder Include="IO\" />
+  </ItemGroup>
+</Project>
